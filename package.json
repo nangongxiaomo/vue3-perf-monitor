@@ -1,15 +1,18 @@
 {
   "name": "vue3-perf-monitor",
-  "version": "1.0.0",
+  "type": "module",
+  "version": "1.0.1",
   "description": "A Vue 3 plugin to monitor setTimeout, setInterval, requestAnimationFrame, requestIdleCallback performance",
   "main": "dist/vue3-perf-monitor.umd.js",
   "module": "dist/vue3-perf-monitor.es.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "vite build",
+    "build:types": "tsc",
+    "build:js": "vite build",
+    "build": "pnpm run build:types && pnpm run build:js",
     "prepublishOnly": "pnpm run build"
   },
   "keywords": [

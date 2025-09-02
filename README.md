@@ -12,7 +12,7 @@ All options are **optional**.
 ```javascript
 //推荐动态加载插件
 if (import.meta.env.DEV) {
-    import('./monitor').then(({ default: perfMonitorPlugin }) => {
+    import('vue3-perf-monitor').then(({ default: perfMonitorPlugin }) => {
       app.use(perfMonitorPlugin, {
         threshold: 20
       })
